@@ -14,15 +14,16 @@ class SStack:
 
     #　压入数据
     def push(self, elem):
+		# 从列表尾部插入数据
         self._elem.append(elem)
-        # 测试：打印当前栈中数据
-        print(self._elem)
+        
 
     # 弹出数据
     def pop(self):
         # 需要判断栈是否为空
         if self.is_empty():
             raise IndexError("stack error:试图从空栈中弹出数据")
+        # 从列表的尾部弹出数据
         return self._elem.pop()
 
 
@@ -39,4 +40,4 @@ if __name__ == "__main__":
     while not mystack.is_empty():
         print(mystack.pop())
     #　试图从空栈中弹出数据
-    # mystack.pop()
+    mystack.pop()
